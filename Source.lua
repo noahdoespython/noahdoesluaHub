@@ -122,7 +122,7 @@ local themeStyles = {
     Dizcord = {
         SchemeColor = Color3.fromRGB(105, 123, 190),
         Background = Color3.fromRGB(44, 47, 51),
-        Header = Color3.fromRGB(31, 34, 70),
+        Header = Color3.fromRGB(35, 39, 42),
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(22, 29, 31)
     }
