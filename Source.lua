@@ -120,9 +120,9 @@ local themeStyles = {
         ElementColor = Color3.fromRGB(22, 29, 31)
     },
     Dizcord = {
-        SchemeColor = Color3.fromRGB(114, 137, 218),
+        SchemeColor = Color3.fromRGB(28, 32, 46),
         Background = Color3.fromRGB(44, 47, 51),
-        Header = Color3.fromRGB(64, 78, 237),
+        Header = Color3.fromRGB(31, 34, 70),
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(22, 29, 31)
     }
