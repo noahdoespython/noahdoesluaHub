@@ -1,1 +1,93 @@
-local r={"Clientsided explorer.","Increases Walkspeed.","Dizcord","https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/exploitScripts/darkDexV4.lua","WalkSpeed","Use this to spy on remotes, and to use them to exploit functions!","CreateLib","Leka Home","This is used to play sounds through vehicles. This RELIES on vehicles, so please do not use them if they do not exist.","A good way to manipulate ROBLOX\'s system. Also very powerful for noclipping and flying.","https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua","Mostly Used","DomainX Script Hub","Infinite Yield","Airport Scripts","Players","https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/Source.lua","https://raw.githubusercontent.com/shlexsoftworks/DomainX/main/source","https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/lex.lua","LocalPlayer","SimpleSpy","Dark Dex V4","This is a free version, so this will only work after 150 seconds. (2.5 mins)","Humanoid","Walkspeed Mods","General Spying Assets","Character","ACS_6 Sound Exploit"}do local z,Y=1,28 while z<Y do r[z],r[Y]=r[Y],r[z]z,Y=z+1,Y-1 end z,Y=1,27 while z<Y do r[z],r[Y]=r[Y],r[z]z,Y=z+1,Y-1 end z,Y=28,28 while z<Y do r[z],r[Y]=r[Y],r[z]z,Y=z+1,Y-1 end end local function N(z)return r[z+21316]end local z=(loadstring(game:HttpGet(N(-21300))))()local Y=z[N(-21310)](N(-21309),N(-21314))local q=Y:NewTab(N(-21302))local A=q:NewSection(N(-21305))A:NewButton(N(-21289),N(-21308),function()(loadstring(game:HttpGet(N(-21298),true)))()end)A:NewButton(N(-21304),N(-21294),function()(loadstring(game:HttpGet(N(-21299),true)))()end)A:NewSlider(N(-21292),N(-21315),500,0,function(z)game[N(-21301)][N(-21297)][N(-21290)][N(-21293)][N(-21312)]=z end)local D=Y:NewTab(N(-21302))local j=D:NewSection(N(-21291))j:NewButton(N(-21296),N(-21311),function()(loadstring(game:HttpGet(N(-21306),true)))()end)j:NewButton(N(-21295),N(-21288),function()(loadstring(game:HttpGet(N(-21313),true)))()end)j:NewButton(N(-21303),N(-21307),function()(loadstring(game:HttpGet(N(-21313),true)))()end)
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/Source.lua"))()
+local win = lib.CreateLib("Leka Home", "Dizcord")
+
+local Tab = win:NewTab("Airport Scripts")
+
+local Section = Tab:NewSection("Mostly Used")
+
+local SectionS = Tab:NewSection("Serious Exploiting")
+
+Section:NewButton("ACS_6 Sound Exploit", "This is used to play sounds through vehicles. This RELIES on vehicles, so please do not use them if they do not exist.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/lexCheckForAC_6.lua", true))()
+end)
+
+SectionS:NewButton("SaveInstance", "Downloads the game.", function()
+    saveinstance()
+end)
+
+SectionS:NewButton("R15 Fling LocalPlayer", "Fling LocalPlayer (R15)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/exploitScripts/R15_Fling.lua", true))()
+end)
+
+SectionS:NewButton("R6 Fling LocalPlayer", "Fling LocalPlayer (R6)", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/exploitScripts/R6_Fling.lua", true))()
+end)
+
+Section:NewButton("DomainX Script Hub", "This is a free version, so this will only work after 150 seconds. (2.5 mins)", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexsoftworks/DomainX/main/source',true))()
+end)
+
+Section:NewSlider("Walkspeed", "Increases Walkspeed.", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewSlider("JumpPower", "Increases Jumppower.", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local TAB2 = win:NewTab("General Exploiting")
+
+local Section2 = TAB2:NewSection("General Spying Assets")
+
+
+Section2:NewButton("SimpleSpy (BROKEN)", "Exploit remotes with this.", function()
+    warn("doesnt work lmao")
+end)
+
+Section2:NewButton("Dark Dex V4", "Clientsided explorer.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/exploitScripts/darkDexV4.lua", true))()
+end)
+
+Section2:NewButton("Infinite Yield", "A good way to manipulate ROBLOX's system. Also very powerful for noclipping and flying.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/noahdoespython/noahdoesluaHub/main/exploitScripts/infYield.lua", true))()
+end)
+
+
+
+
+Section2:NewToggle("Enable NoClip (UNDONE, DOES NOTHING)", "Enables Noclip.", function(state)
+    if state then
+        
+    else
+        
+    end
+end)
+
+local Section3 = TAB2:NewSection("Shooting Games")
+local EzAimbot = loadstring(game:HttpGet("https://pastebin.com/raw/pxw53EdA"))()
+
+Section3:NewToggle("Enable Aimbot", "Enables EzAimbot.", function(state)
+    if state then
+        EzAimbot.Enable(true,{["Size"]=200,["Sides"]=50,["Color"]=Color3.fromRGB(0, 68, 255)},"E",false)
+    else
+        EzAimbot.Disable()
+    end
+end)
+
+
+
+
+
+
+local TAB3 = win:NewTab("lekaHub")
+
+local Section3 = TAB3:NewSection("Popular")
+
+Section3:NewButton("VapeV4 Bedwars Script", "Vape V4 Bedwars script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+Section3:NewButton("Solaris V2 (Universal)", "Solaris V2. Works with many games.", function()
+    loadstring(game:HttpGet('https://solarishub.dev/script.lua',true))()
+end)
+
